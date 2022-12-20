@@ -1,0 +1,9 @@
+const scrollUp = document.querySelector("#scrollUp");
+
+scrollUp.addEventListener("click", function () {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "smooth",
+  });
+});

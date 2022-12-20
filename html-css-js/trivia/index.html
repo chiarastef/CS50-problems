@@ -1,0 +1,72 @@
+<!-- Problem link: https://cs50.harvard.edu/x/2022/labs/8/ -->
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>On average, how many seeds are located on the outside of a strawberry?</h3>
+                <div id="part1Text"></div>
+                <button class="wrong-answer">100</button>
+                <button id="rightAnswer">200</button>
+                <button class="wrong-answer">400</button>
+                <button class="wrong-answer">500</button>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>Where do penguins live?</h3>
+                <div id="part2Text"></div>
+                <form>
+                    <input type="text" id="answer">
+                    <button id="checkAnswer">Check Answer</button>
+                </form>
+            </div>
+        </div>
+        <script>
+            const rightAnswer = document.querySelector("#rightAnswer");
+            const wrongAnswer = document.querySelectorAll(".wrong-answer");
+            const part1Text = document.querySelector("#part1Text");
+            const answer = document.querySelector("#answer");
+            const checkAnswer = document.querySelector("#checkAnswer");
+            const part2Text = document.querySelector("#part2Text");
+
+            rightAnswer.addEventListener("click", function() {
+                rightAnswer.style.backgroundColor = "#8eff80";
+                part1Text.innerText = "Correct!";
+            });
+
+            wrongAnswer.forEach(function(btn) {
+                btn.addEventListener("click", function() {
+                    btn.style.backgroundColor = "#ff5e5e";
+                    part1Text.innerText = "Incorrect";
+                })
+            });
+
+            checkAnswer.addEventListener("click", function(event) {
+                event.preventDefault();
+                lowerCaseAnswer = answer.value.toLowerCase();
+                if (lowerCaseAnswer === "antartica"){
+                    answer.style.backgroundColor = "#8eff80";
+                    part2Text.innerText = "Correct!";
+                } else {
+                    answer.style.backgroundColor = "#ff5e5e";
+                    part2Text.innerText = "Incorrect";
+                }
+            })
+         </script>
+    </body>
+</html>

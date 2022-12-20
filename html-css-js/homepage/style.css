@@ -1,0 +1,235 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+
+nav {
+  text-align: center;
+}
+
+nav img {
+  height: 24px;
+}
+
+/* HOME */
+
+/* Sections */
+
+section {
+  color: #07043e;
+  padding: 70px 40px;
+}
+
+/* Hero */
+
+section.hero {
+  text-align: center;
+}
+
+.hero-row {
+  flex-direction: row-reverse;
+}
+
+.hero-title {
+  margin-top: 35px;
+}
+
+.hero-paragraph {
+  margin-top: 18px;
+}
+
+.btn-get-started {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Description */
+
+section.description {
+  background-color: #f8f8fe;
+}
+
+.descr-title {
+  font-size: 18px;
+  text-align: center;
+  margin: 35px 0 25px;
+}
+
+.descr-paragraph {
+  color: #72738d;
+  font-size: 14px;
+}
+
+/* Call to action */
+
+section.call-to-action {
+  color: #ffffff;
+  text-align: center;
+  background-color: #575989;
+}
+
+.cta-title {
+  font-size: 20px;
+}
+
+.cta-paragraph {
+  font-size: 14px;
+  margin-top: 15px;
+}
+
+/* FEATURES */
+section.carousel {
+  padding: 0;
+}
+
+section.carousel .carousel-item {
+  font-size: 30px;
+  text-align: center;
+  line-height: 300px;
+  height: 300px;
+  background-color: #c5c5c5;
+}
+
+.features-row {
+  justify-content: center;
+}
+
+.feature-card {
+  margin: 15px auto 0;
+}
+
+.feature-img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background-color: #c5c5c5;
+  margin: 20px auto 0;
+}
+
+/* TEAM */
+.team h1 {
+  text-align: center;
+}
+
+.team-card {
+  margin-top: 15px;
+}
+
+/* SIGN IN PAGE */
+section.sign-in-form button {
+  display: block;
+  width: 100%;
+}
+
+/* Scroll up */
+.scroll-up {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  padding: 8px 10px;
+  border: none;
+  border-radius: 30px;
+  background-color: rgb(197, 197, 197);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Footer */
+
+footer {
+  color: #ffffff;
+  background-color: #07043b;
+  padding: 70px 40px;
+}
+
+footer .logo {
+  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(132deg)
+    brightness(115%) contrast(109%);
+}
+
+footer .contact {
+  margin-top: 25px;
+}
+
+footer span {
+  margin-left: 5px;
+}
+
+/* Media Queries */
+@media screen and (min-width: 768px) {
+  section.hero {
+    text-align: left;
+  }
+
+  .hero-title {
+    font-size: 24px;
+  }
+
+  .hero-paragraph {
+    font-size: 15px;
+  }
+
+  section.description {
+    padding: 30px 40px 40px;
+  }
+
+  section.sign-in-form {
+    width: 70%;
+    margin: auto;
+  }
+
+  footer {
+    text-align: right;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .navbar-menu {
+    justify-content: end;
+  }
+
+  .descr-title {
+    font-size: 24px;
+  }
+
+  .descr-paragraph {
+    font-size: 15px;
+  }
+
+  .team-row {
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero img,
+  .description img {
+    max-width: 80%;
+  }
+
+  .hero-img-col {
+    text-align: right;
+  }
+
+  .hero-text-col {
+    margin-top: 40px;
+  }
+
+  .call-to-action form {
+    max-width: 70%;
+    margin: auto;
+  }
+
+  section.sign-in-form {
+    max-width: 550px;
+  }
+}
